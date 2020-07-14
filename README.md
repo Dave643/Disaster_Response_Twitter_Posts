@@ -20,3 +20,4 @@ The machine that I was using was not able to run the GridSerchCV to get the opti
 
 ### Output
 Web app image below:
+![Screenshot](Web_app.png)
