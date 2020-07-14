@@ -17,3 +17,6 @@ The machine that I was using was not able to run the GridSerchCV to get the opti
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+### Output
+Web app image below:
