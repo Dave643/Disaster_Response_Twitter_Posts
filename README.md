@@ -1,4 +1,9 @@
-# Disaster Response Pipeline Project
+# Disaster Response Project
+
+### Background
+This project takes previously collected tweets during disasters, which have been categoriesed.  This data will need cleaning with an ETL pipeline and to be able to catagorise new unseen data develop a ML pipeline to generate a model that will be able to catagorise this data.
+
+The machine that I was using was not able to run the GridSerchCV to get the optimal parameters for the model but what results here is a good first attempt.
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
