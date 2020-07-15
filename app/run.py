@@ -43,6 +43,11 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    # Breakdown of massages used for classification catgegories.
+    categories = df.drop(['id', 'message', 'original', 'genre'], axis=1)
+    category = categories.columns.to_list()
+    message_sum = categories.sum().sort_values(ascending=False).to_list()
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -63,6 +68,27 @@ def index():
                     'title': "Genre"
                 }
             }
+        }
+        
+        {
+            'data': [
+                Bar(
+                    x = category,
+                    y = message_sum,
+                    name = 'Categories'
+                )
+            ],
+            
+            'layout': {
+                'title': 'Count of instances category marked.',
+                'yaxis': {
+                    'title': 'count'
+                },
+                'xaxis': {
+                    'title': 'Categories'
+                }
+            }
+            
         }
     ]
     
