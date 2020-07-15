@@ -23,4 +23,4 @@ Web app image below:
 ![Screenshot](web_app.png)
 
 #### Results once tweet has been entered
-![Screenshot}(web_app_results.png)
+![Screenshot](web_app_results.png)
