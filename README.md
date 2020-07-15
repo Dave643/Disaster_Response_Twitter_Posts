@@ -17,7 +17,6 @@ The machine that I was using was not able to run the GridSerchCV to get the opti
    * DisasterResponse.db
    * process_data.py
  * models
-   * classifier.pkl
    * train_classifier.py
    
 
