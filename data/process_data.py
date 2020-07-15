@@ -52,7 +52,7 @@ def clean_data(df):
         categories[column] = categories[column].replace({column: ''}, 
                                                         regex = True)
         categories[column] = categories[column].replace({'-': ''}, 
-                                                        regex = True).astype('str')
+                                                        regex = True).astype('int64')
     
     # join this categories columns to the df dataframe and drop the old categories column.
     df = df.drop(columns = 'categories')
