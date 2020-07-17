@@ -89,22 +89,22 @@ def build_model():
 
     parameters = {
         #### CountVectorizer ####
-        'vect__max_df': (0.5, 0.75, 1.0),
-        'vect__max_features': (None, 5000, 10000),
-        #'vect__min_df': 1,
-        'vect__ngram_range': ((1, 1), (1, 2)),
+        #'vect__max_df': (0.5, 0.75, 1.0),
+        #'vect__max_features': (None, 5000, 10000),
+        #'vect__ngram_range': ((1, 1), (1, 2)),
         
         #### TfidfTransformer ####
-        'tfidf__use_idf': (True, False),
+        #'tfidf__use_idf': (True, False),
         
         #### clf ####
         'clf__estimator__min_samples_split': [2, 3, 4],
-        'clf__estimator__n_estimators': [50, 100, 200]
+        #'clf__estimator__max_features': ['auto', 'sqrt', 'log2'],
+        #'clf__estimator__n_estimators': [50, 100, 200]
     }
     
-    #cv = GridSearchCV(pipeline, param_grid = parameters, n_jobs = -1)
+    cv = GridSearchCV(pipeline, param_grid = parameters, n_jobs = -1)
     
-    return pipeline
+    return cv
     
 #def evaluate_model(model, X_test, Y_test, category_names):
 def evaluate_model(model, X_test, Y_test):
